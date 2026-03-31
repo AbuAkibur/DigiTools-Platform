@@ -7,7 +7,11 @@
     "period": "monthly",
     "tag": "Best Seller",
     "tagType": "bestseller",
-    "features": ["Unlimited AI generations", "50+ writing templates", "Grammar checker"],
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "Grammar checker"
+    ],
     "icon": "📝"
   },
   {
@@ -64,27 +68,5 @@
     "tagType": "bestseller",
     "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
     "icon": "📱"
-  },
-  {
-    "id": 7,
-    "name": "SEO Analyzer Suite",
-    "description": "Boost your website rankings with in-depth keyword research and audit tools.",
-    "price": 59,
-    "period": "monthly",
-    "tag": "Popular",
-    "tagType": "popular",
-    "features": ["Keyword research", "Site audit", "Competitor analysis"],
-    "icon": "🔍"
-  },
-  {
-    "id": 8,
-    "name": "Video Editing Presets",
-    "description": "Professional LUTs and transitions to make your videos stand out instantly.",
-    "price": 25,
-    "period": "one-time",
-    "tag": "New",
-    "tagType": "new",
-    "features": ["200+ LUTs", "100+ transitions", "Lifetime access"],
-    "icon": "🎬"
   }
 ]

@@ -1,3 +1,5 @@
+import { Check } from 'lucide-react';
+
 function Pricing() {
   const plans = [
     { name: "Starter", tagline: "Perfect for getting started", price: "$0", period: "/Month", features: ["Access to 10 free tools", "Basic templates", "Community support", "1 project per month"], btnText: "Get Started Free", featured: false },
@@ -26,7 +28,7 @@ function Pricing() {
               <ul className="list-none p-0 flex-1 mb-8 space-y-3">
                 {p.features.map((f) => (
                   <li key={f} className={`flex items-center gap-2.5 text-sm ${p.featured ? "text-white" : "text-gray-600"}`}>
-                    <i className="fa-solid fa-check text-xs" style={{ color: p.featured ? "#a7f3d0" : "#10b981" }}></i>
+                    <Check size={14} style={{ color: p.featured ? "#a7f3d0" : "#10b981", flexShrink: 0 }} />
                     {f}
                   </li>
                 ))}

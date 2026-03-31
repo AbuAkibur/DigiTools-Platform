@@ -1,4 +1,5 @@
-import { Play } from 'lucide-react';
+import { Play } from "lucide-react";
+import bannerImg from "../assets/banner.png";
 
 function Hero() {
   return (
@@ -14,7 +15,8 @@ function Hero() {
             <br className="hidden md:block" /> Digital Workflow
           </h1>
           <p className="text-gray-500 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-            Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today.
+            Access premium AI tools, design assets, templates, and productivity
+            software—all in one place. Start creating faster today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button className="btn-grad text-white border-0 rounded-full font-semibold text-base cursor-pointer px-8 py-3.5 transition-all">
@@ -25,9 +27,12 @@ function Hero() {
             </button>
           </div>
         </div>
-        <div className="rounded-2xl overflow-hidden shadow-2xl mt-8 lg:mt-0" style={{ boxShadow: "0 20px 60px rgba(124,58,237,.18)" }}>
+        <div
+          className="rounded-2xl overflow-hidden shadow-2xl mt-8 lg:mt-0"
+          style={{ boxShadow: "0 20px 60px rgba(124,58,237,.18)" }}
+        >
           <img
-            src="/assets/banner.png"
+            src={bannerImg}
             alt="DigiTools Banner"
             className="w-full block"
             onError={(e) => {

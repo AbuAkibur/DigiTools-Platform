@@ -1,9 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
 
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --color-brand: #7c3aed;
+  --color-brand-mid: #8b5cf6;
+  --color-brand-light: #ede9fe;
+  --color-brand-dark: #5b21b6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Manrope", sans-serif;
@@ -16,28 +30,48 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.btn-grad { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); }
-.btn-grad:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-grad {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+}
+.btn-grad:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
 
-.btn-added { background: #10b981 !important; }
+.btn-added {
+  background: #10b981 !important;
+}
 
-.stats-grad, .cta-grad, .pricing-feat {
+.stats-grad,
+.cta-grad,
+.pricing-feat {
   background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
 }
 
 .card-lift {
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
 }
 .card-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(124, 58, 237, 0.13);
 }
 
-.step-icon-bg { background: #ede9fe; }
+.step-icon-bg {
+  background: #ede9fe;
+}
 
 .mob-menu {
-  max-height: 0; overflow: hidden;
-  transition: max-height 0.35s ease, opacity 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.3s ease;
   opacity: 0;
 }
-.mob-menu.open { max-height: 600px; opacity: 1; }
+.mob-menu.open {
+  max-height: 600px;
+  opacity: 1;
+}
