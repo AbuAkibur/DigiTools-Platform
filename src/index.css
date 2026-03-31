@@ -1,14 +1,8 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
+*, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
@@ -22,10 +16,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.btn-grad {
-  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
-}
-
+.btn-grad { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); }
 .btn-grad:hover { opacity: 0.88; transform: translateY(-1px); }
 
 .btn-added { background: #10b981 !important; }
@@ -37,7 +28,6 @@ body {
 .card-lift {
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
-
 .card-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(124, 58, 237, 0.13);
@@ -46,13 +36,8 @@ body {
 .step-icon-bg { background: #ede9fe; }
 
 .mob-menu {
-  max-height: 0;
-  overflow: hidden;
+  max-height: 0; overflow: hidden;
   transition: max-height 0.35s ease, opacity 0.3s ease;
   opacity: 0;
 }
-
-.mob-menu.open {
-  max-height: 600px;
-  opacity: 1;
-}
+.mob-menu.open { max-height: 600px; opacity: 1; }
