@@ -17,39 +17,70 @@ function App() {
 
   const handleBuy = (product) => {
     if (cart.find((p) => p.id === product.id)) {
-      toast.info(`${product.name} is already in your cart!`, { position: "top-right" });
+      toast.info(`${product.name} is already in your cart!`, {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "light",
+      });
       return;
     }
+
     setCart((prev) => [...prev, product]);
-    toast.success(`${product.name} added to cart! 🛒`, { position: "top-right" });
+    toast.success(`${product.name} added to cart! 🛒`, {
+      position: "top-right",
+      autoClose: 3000,
+      theme: "light",
+    });
   };
 
   const handleRemove = (id) => {
     const item = cart.find((p) => p.id === id);
     setCart((prev) => prev.filter((p) => p.id !== id));
-    if (item) toast.error(`${item.name} removed from cart`, { position: "top-right" });
+
+    if (item) {
+      toast.error(`${item.name} removed from cart`, {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "light",
+      });
+    }
   };
 
   const handleCheckout = () => {
     setCart([]);
-    toast.success("Order placed successfully! Thank you! 🎉", { position: "top-right", autoClose: 4000 });
+    toast.success("Order placed successfully! Thank you! 🎉", {
+      position: "top-right",
+      autoClose: 4000,
+      theme: "light",
+    });
   };
 
   return (
     <div className="flex flex-col min-h-screen w-full bg-white text-gray-900">
-      <Navbar cartCount={cart.length} onCartClick={() => prodRef.current?.scrollIntoView({ behavior: "smooth" })} />
+      <Navbar
+        cartCount={cart.length}
+        onCartClick={() => prodRef.current?.scrollIntoView({ behavior: "smooth" })}
+      />
+
       <main className="flex-1">
         <Hero />
         <Stats />
         <div ref={prodRef}>
-          <ProductsSection products={PRODUCTS} cart={cart} onBuy={handleBuy} onRemove={handleRemove} onCheckout={handleCheckout} />
+          <ProductsSection
+            products={PRODUCTS}
+            cart={cart}
+            onBuy={handleBuy}
+            onRemove={handleRemove}
+            onCheckout={handleCheckout}
+          />
         </div>
         <Steps />
         <Pricing />
         <CTA />
       </main>
+
       <Footer />
-      <ToastContainer position="top-right" />
+      <ToastContainer />
     </div>
   );
 }
